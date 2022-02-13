@@ -1,0 +1,11 @@
+---
+- name: Pull Docker image of spandan_app
+  hosts: local
+  connection: local
+  vars:
+    ansible_python_interpreter: /usr/bin/python
+  tasks:
+    - name: Pull image spandan_app
+      docker_image:
+        name: bishalpandia/spandan_app:latest
+        source: pull
